@@ -1,8 +1,11 @@
-var textInputEl = document.querySelector('.text')
-var buttonEl = document.querySelector('.searchBtn')
-var nameEl = document.querySelector('.name')
-var descriptionEl = document.querySelector('.desc')
-var tempEl = document.querySelector('.temp')
+var textInputEl = document.querySelector('.text');
+var buttonEl = document.querySelector('.searchBtn');
+var nameEl = document.querySelector('.name');
+var descriptionEl = document.querySelector('.desc');
+var tempEl = document.querySelector('.temp');
+windEl = document.querySelector('.wind');
+var humidEl = document.querySelector('.humidity')
+var uvEl = document.querySelector('.uv');
 
 function handleSubmit(event) {
     event.preventDefault()
@@ -11,7 +14,7 @@ function handleSubmit(event) {
         getApi(city)
         textInputEl.value = '';
     } else {
-        alert('please enter a city name')
+        alert('please enter a city name');
     }
 }
 
@@ -33,6 +36,9 @@ var requestURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&unit
 var displayWeather = function(weather, searchedCity) {
     nameEl.textContent = searchedCity;
     tempEl.textContent = "Temperature: " + weather.main.temp;
+    windEl.textContent = "Wind Speed: " + weather.wind.speed;
+    humidEl.textContent = "Humidity: " + weather.main.humidity;
+    uvEl.textContent = "";
 }
 
 
@@ -47,5 +53,3 @@ var displayWeather = function(weather, searchedCity) {
 //         })
 // }
 buttonEl.addEventListener('click', handleSubmit);
-
-getApi()
