@@ -29,12 +29,12 @@ function handleSubmit(city) {
 
 var displayWeatherButtons = function () {
     var items = JSON.parse(localStorage.getItem('items')) || [];
-    for (var item of items) {
+    for (var searches of items) {
         var btnEl = document.createElement('button');
-        btnEl.dataset.item = item;
+        btnEl.dataset.item = searches;
         btnEl.setAttribute('class', 'd-block')
         btnEl.className = 'btn'
-        btnEl.textContent = item;
+        btnEl.textContent = searches;
         searchBtnEl.appendChild(btnEl)
     }
 }
