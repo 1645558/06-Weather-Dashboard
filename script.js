@@ -24,7 +24,7 @@ var getCityWeather = function (city) {
 };
 
 //gather weather data from api and display on page
-var displayWeather = function(weather, searchCity) {
+var displayWeather = function (weather, searchCity) {
     weatherContainerEl.textContent = '';
     citySearchInputEl.textContent = searchCity;
 
@@ -42,15 +42,27 @@ var displayWeather = function(weather, searchCity) {
     weatherContainerEl.appendChild(humidityEl);
 
     weatherContainerEl.appendChild(windSpeedEl);
- }
+}
 
- var get5Day = function(city){
+var get5Day = function (city) {
     var apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=0cf1c7e9555bfeee92b38ab834c53129`
 
     fetch(apiURL)
-    .then(function(response){
-        response.json().then(function(data){
+        .then(function (response) {
+            response.json().then(function (data) {
+            });
         });
-    });
 };
 
+var display5Day = function (weather) {
+    forecastContainerEl.textContent = ""
+    forecastTitle.textContent = "5-Day Forecast:";
+
+    var forecast = weather.list;
+    for (var i = 5; i < forecast.length; i = i + 8) {
+        var dailyForecast = forecast[i];
+
+
+        
+    }
+}
