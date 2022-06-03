@@ -36,5 +36,21 @@ var displayWeather = function(weather, searchCity) {
 
     var windSpeedEl = document.createElement('span');
     windSpeedEl.textContent = 'Wind speed: ' + weather.main.speed + ' MPH';
+
+    weatherContainerEl.appendChild(temperatureEl);
+
+    weatherContainerEl.appendChild(humidityEl);
+
+    weatherContainerEl.appendChild(windSpeedEl);
  }
+
+ var get5Day = function(city){
+    var apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=0cf1c7e9555bfeee92b38ab834c53129`
+
+    fetch(apiURL)
+    .then(function(response){
+        response.json().then(function(data){
+        });
+    });
+};
 
