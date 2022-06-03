@@ -6,35 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
 </head>
 
 <body>
-    <header class="header text-center p-3 bg-dark text-light">
+    <header class="bg-dark text-white text-center p-2">
         <h1>Weather Dashboard</h1>
     </header>
-
-    <section class="form p-4">
-        <h2 class="search-header">Search for a city:</h2>
-        <input type="text" class="text mb-2 w-25">
-        <button class="searchBtn d-block w-25">Search</button>
+    <section class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 p-2 search-column">
+                <form class="city-search-form border p-2">
+                    <h4>Search</h4>
+                    <input type="text" class="form-input" id="city">
+                    <button class="btn btn-primary" type="submti">Search</button>
+                </form>
+                <div class="past-search border" id="past-search-buttons"></div>
+            </div>
+            <div class="col-12 col-md-9">
+                <div class="row border selected-city" id="current forecast">
+                    <div class="col-12">
+                        <h2 id="searched-city"></h2>
+                        <div id="current-weather-container" class="list-group"></div>
+                    </div>
+                </div>
+                <div class="row border" id="five-day-forecast">
+                    <h2 class="col-12" id="forecast"></h2>
+                    <div class="d-flex" id="fiveday-container"></div>
+                </div>
+            </div>
+        </div>
     </section>
-
-    <div class="display p-4 d-flex align-items-end flex-column">
-        <h1 class="name"></h1>
-        <p class="desc"></p>
-        <p class="temp"></p>
-        <p class="wind"></p>
-        <p class="humidity"></p>
-        <p class="uv"></p>
-    </div>
-    <div class="five-day-forecast">
-        <h2 class="forecast"></h2>
-        <div class="five-day-container"></div>
-    </div>
-
-    <div class="search-buttons"></div>
-</body>
 <script src="./script.js"></script>
+</body>
 
 </html>
