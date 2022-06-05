@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <title>Weather Dashboard</title>
 </head>
 
 <body>
-    <header class="bg-dark text-white text-center p-2">
+    <header class="header bg-dark text-white text-center p-2">
         <h1>Weather Dashboard</h1>
     </header>
-    <section class="container">
+
+    <main class="container">
         <div class="row">
-            <div class="col-12 col-md-3 p-2 search-column">
-                <form class="city-search-form border p-2">
-                    <h4>Search</h4>
-                    <input type="text" class="form-input" id="city">
-                    <button class="btn btn-primary" type="submti">Search</button>
-                </form>
-                <div class="past-search border" id="past-search-buttons"></div>
-            </div>
-            <div class="col-12 col-md-9">
-                <div class="row border selected-city" id="current forecast">
-                    <div class="col-12">
-                        <h2 id="searched-city"></h2>
-                        <div id="current-weather-container" class="list-group"></div>
-                    </div>
-                </div>
-                <div class="row border" id="five-day-forecast">
-                    <h2 class="col-12" id="forecast"></h2>
-                    <div class="d-flex" id="fiveday-container"></div>
-                </div>
+        <div class="col-12 col-md-3 p-2 search-column">
+        <form class="border p-2" id="city-search">
+            <h4>Search for a City</h2>
+                <input id="city" type="text" autofocus="true" class="form-input" />
+                <button class="btn btn-primary mt-2" type="submit">Search</button>
+        </form>
+        <div class="previous-search border" id="previous-search-buttons"></div>
+        </div>
+        <div class="col-12 col-md-9">
+        <div class="row border selected-city" id="current-forecast">
+            <div class="col-12">
+                <h2 id="searched-city"></h2>
+                <div id="current-weather-div" class="list-group mb-4"></div>
             </div>
         </div>
-    </section>
-<script src="./script.js"></script>
+        <div class="five-day row border" id="five-day-forecast">
+            <h2 class="col-12" id="forecast"></h2>
+            <div class="d-flex" id="fiveday-container"></div>
+        </div>
+        </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

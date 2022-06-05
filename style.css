@@ -1,0 +1,28 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+    background-image: linear-gradient(to right, rgb(67, 126, 252), blue);
+}
+
+.five-day {
+    background-image: linear-gradient(gray, lightgray);
+}
+
+.search-column {
+    background-image: linear-gradient(orange, yellow);
+}
+
+.list-group-item {
+    line-height: 0.5;
+    border: none;
+}
+
+.card-body {
+    flex: auto
+}
+
+.selected-city {
+    background-image: linear-gradient(orange, yellow);
+}
