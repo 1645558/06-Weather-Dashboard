@@ -13,5 +13,5 @@ that day, and a 5 day forecast!
 ![Weather Dashboard](./Weather-Dashboard.png)
 
 ## Resources
-- [Repository]()
-- [Live Site]()
+- [Repository](https://github.com/1645558/06-Weather-Dashboard)
+- [Live Site](https://1645558.github.io/06-Weather-Dashboard/)
